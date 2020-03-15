@@ -38,7 +38,7 @@ public class BinaryHeapPriorityQueue{
                     i = parent(i)
      */
 
-    private void IncreaseKey(int i, int key){
+    public void IncreaseKey(int i, int key){
         if (key < items[i]) {
             System.out.println("Error new key is smaller than current key");
         }
@@ -90,5 +90,4 @@ public class BinaryHeapPriorityQueue{
             MaxHeapify(items, largest);
         }
     }
-
 }

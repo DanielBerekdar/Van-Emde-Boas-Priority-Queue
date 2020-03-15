@@ -209,12 +209,22 @@ public class vEBtreePriorityQueue {
             }
         }
     }
-    //Extract max will get the biggest in the set, then delete it.
 
+    //Extract max will get the biggest in the set, then delete it.
     public  int ExtractMax(vEBtreePriorityQueue vEB){
         int max = vEB.max;
         Delete(vEB, max);
         return  max;
     }
+
+    public void IncreaseKey(vEBtreePriorityQueue vEB, int value, int priority){
+        if(value < priority){
+            System.out.println("Error: new key is smaller than previous key.");
+        }else{
+            vEB.Delete(vEB,value);
+            vEB.Insert(vEB, priority);
+        }
+    }
+
 
 }
